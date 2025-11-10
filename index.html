@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copiar Código</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      width: 250px;
+      text-align: center;
+    }
+    button {
+      background-color: #00c4cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #009da3;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" value="00020126360014BR.GOV.BCB.PIX0114630208520001605204000053039865802BR5908CAPSIQUE6009Barbacena62240520PorUmAmanhaMaisJusto6304A315" id="codigo" readonly>
+  <button onclick="copiar()">Copiar código</button>
+
+  <script>
+    function copiar() {
+      const codigo = document.getElementById('codigo');
+      codigo.select();
+      navigator.clipboard.writeText(codigo.value);
+      alert('Código copiado!');
+    }
+  </script>
+</body>
+</html>
